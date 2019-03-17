@@ -19,6 +19,11 @@ describe Game do
     end
   end
 
+  describe '#switch_turns' do
+    it 'switches turns to the other person' do
+      expect {@game.switch_turns}.to change{@game.player1_turn}.from(true).to(false)
+    end
+  end
 
 
 end
