@@ -2,8 +2,14 @@ require 'game'
 
 describe Game do
   before(:each) do
-    @game = Game.new
     @player = double("player")
+    @player2 = double("player 2")
+    @game = Game.new(@player, @player2)
+  end
+
+  it 'initializes with 2 players as instant vars' do
+    expect(@game).to respond_to(:player1)
+    expect(@game).to respond_to(:player2)
   end
 
   describe '#attack' do
@@ -12,6 +18,7 @@ describe Game do
       @game.attack(@player)
     end
   end
+
 
 
 end
