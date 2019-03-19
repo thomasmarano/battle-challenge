@@ -7,7 +7,6 @@ class Player
   end
 
   def get_hit
-    @hp -= 50
+    @hp -= 10
   end
-
 end

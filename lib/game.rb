@@ -3,9 +3,19 @@ class Game
   attr_reader :player1_turn, :loser
 
   def initialize(player1, player2)
+
     @players = [player1, player2]
     @player1_turn = true
     @loser
+
+  end
+
+  def self.create_game(player1, player2)
+    @game = Game.new(player1, player2)
+  end
+
+  def self.instance
+    @game
   end
 
   def player1
